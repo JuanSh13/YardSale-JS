@@ -282,6 +282,8 @@ nav {
 }
 .product-card {
   width: 240px;
+
+  cursor: pointer;
 }
 .product-card img {
   width: 240px;
@@ -325,6 +327,8 @@ nav {
   
   width: 360px;
   padding-bottom: 24px;
+
+  background: var(--white);
 }
 .product-detail-close {
   position: absolute;
