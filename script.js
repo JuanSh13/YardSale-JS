@@ -1,10 +1,12 @@
-// menuEmail => 'click' - desktopMenu
+// navbar-email -> Email ubicado en la navbar
 const menuEmail = document.querySelector('.navbar-email');
+// desktop-menu -> Seccion que se debe desplegar al dar click al navbar-email
 const desktopMenu = document.querySelector('.desktop-menu');
-// menuBarsIcon => 'click' - mobileMenu
+// menu ->  Es el icono de Menu Bars para dispositivos mobiles 
 const menuBarsIcon = document.querySelector('.menu');
+// mobile-menu -> Es la lista de navegacion del navbar para dispositivos mobiles
 const mobileMenu = document.querySelector('.mobile-menu');
-// menuShoppingCartIco => 'click' - sectionShoppingCart
+// 
 const menuShoppingCartIco = document.querySelector('.navbar-shopping-cart');
 const sectionShoppingCart = document.querySelector('.shopping-cart');
 // Cards Container
@@ -19,6 +21,12 @@ function renderProducts(arr) {
     const productCard = document.createElement('div');
     productCard.classList.add('product-card');
     productCard.addEventListener('click', () => {
+      const toggleShoppingCart = sectionShoppingCart.classList.contains('inactive');
+
+      if(!toggleShoppingCart) {
+        sectionShoppingCart.classList.add('inactive');
+      }
+
       productDetail.classList.remove('inactive');
     });
 
@@ -69,15 +77,21 @@ menuBarsIcon.addEventListener('click', () => {
 menuShoppingCartIco.addEventListener('click', () => {
   const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
   const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
-  
+  const toggleProductDetail = productDetail.classList.contains('inactive');
+
   if(!isMobileMenuClosed) {
     mobileMenu.classList.add('inactive');
+  }
+  if(!toggleProductDetail) {
+    productDetail.classList.add('inactive');
   }
   
   sectionShoppingCart.classList.toggle('inactive');
 
 });
 productDetailClose.addEventListener('click', () => {
+  
+
   productDetail.classList.add('inactive');
 });
 
@@ -88,14 +102,78 @@ productList.push({
   image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 productList.push({
-  name: "Table",
-  price: "70,00",
-  image: "https://carulla.vtexassets.com/arquivos/ids/10064979/escritorio-connie-blanco-diseno-moderno-con-dos-entrepanos.jpg?v=638066525870830000",
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 productList.push({
-  name: "PC Master Gamer",
-  price: "280,00",
-  image: "https://assets.jumpseller.com/store/tienda-gamer-medellin/themes/534705/options/93930156/IMG_20221130_002629_006.webp?1671520847",
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Bike",
+  price: "120,00",
+  image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 
 renderProducts(productList);
