@@ -28,6 +28,8 @@ function renderProducts(arr) {
       }
 
       productDetail.classList.remove('inactive');
+
+      append
     });
 
     const productImg = document.createElement('img');
@@ -48,7 +50,7 @@ function renderProducts(arr) {
   
     const productInfoFigure = document.createElement('figure');
     const productInfoFigureImage = document.createElement('img');
-    productInfoFigureImage.setAttribute('src', './icons/bt_add_to_cart.svg');
+    productInfoFigureImage.setAttribute('src', './assets/icons/bt_add_to_cart.svg');
   
     productInfoFigure.appendChild(productInfoFigureImage);
   
